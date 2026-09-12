@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEO Master Prompt Generator | AI Content Architect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="bg-gradient"></div>
+        <div class="gradient-orbs">
+            <div class="orb orb-1"></div>
+            <div class="orb orb-2"></div>
+            <div class="orb orb-3"></div>
+        </div>
+        <div class="grid-pattern"></div>
+        <div class="particles">
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+            <div class="particle"></div>
+        </div>
+        <div class="light-trails"></div>
+        <div class="central-glow"></div>
+    </div>
+
+    <!-- Main Container -->
+    <div class="container" id="mainContainer">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo-area">
+                <div class="logo">◆</div>
+                <div class="header-content">
+                    <h1 class="main-title">SEO Master Prompt Generator</h1>
+                    <div class="badge">AI CONTENT ARCHITECT</div>
+                </div>
+            </div>
+            <p class="subtitle">Build a deeply customized AI content strategy and generation prompt based on your website, audience, SEO goals, existing content, products, services, and visual identity.</p>
+        </header>
+
+        <!-- Progress Indicator -->
+        <div class="progress-section">
+            <div class="progress-indicator" id="progressIndicator">
+                <div class="step-dots">
+                    <div class="step-dot active" data-step="1">01</div>
+                    <div class="step-dot" data-step="2">02</div>
+                    <div class="step-dot" data-step="3">03</div>
+                    <div class="step-dot" data-step="4">04</div>
+                    <div class="step-dot" data-step="5">05</div>
+                    <div class="step-dot" data-step="6">06</div>
+                    <div class="step-dot" data-step="7">07</div>
+                    <div class="step-dot" data-step="8">08</div>
+                    <div class="step-dot" data-step="9">09</div>
+                    <div class="step-dot" data-step="10">10</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Form Container -->
+        <div class="form-container" id="formContainer">
+            <!-- Step 1: Website URL -->
+            <div class="step-card active" data-step="1">
+                <div class="step-header">
+                    <span class="step-number">Step 1</span>
+                    <h2 class="step-title">Website Content Source</h2>
+                </div>
+                <p class="step-description">What is the URL of your website's blog or article section?</p>
+                <div class="form-group">
+                    <label for="blogUrl">Blog URL <span class="required">*</span></label>
+                    <input type="url" id="blogUrl" placeholder="https://example.com/blog/" class="input-field">
+                    <p class="helper-text">Provide the main URL where your existing articles are published. The final AI prompt will instruct the AI to inspect this content before proposing a new article.</p>
+                    <div class="validation-message" id="blogUrlValidation"></div>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()" style="visibility: hidden;">← Previous</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 2: Product/Service Pages -->
+            <div class="step-card" data-step="2">
+                <div class="step-header">
+                    <span class="step-number">Step 2</span>
+                    <h2 class="step-title">Products & Services</h2>
+                </div>
+                <p class="step-description">Do you have product or service pages that should influence the article?</p>
+                <div class="form-group">
+                    <label for="productUrls">Product/Service URLs</label>
+                    <textarea id="productUrls" placeholder="https://example.com/products/&#10;https://example.com/services/&#10;https://example.com/product/example" class="textarea-field" rows="6"></textarea>
+                    <p class="helper-text">Optional — if you don't have product/service pages, leave this field empty and continue.</p>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()">← Previous</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 3: Content Audit Depth -->
+            <div class="step-card" data-step="3">
+                <div class="step-header">
+                    <span class="step-number">Step 3</span>
+                    <h2 class="step-title">Content Audit Depth</h2>
+                </div>
+                <p class="step-description">How deeply should the AI analyze the existing website content?</p>
+                <div class="form-group">
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="auditDepth" value="standard" class="radio-input">
+                            <span class="radio-text"><strong>Standard</strong></span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="auditDepth" value="deep" class="radio-input">
+                            <span class="radio-text"><strong>Deep</strong></span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="auditDepth" value="comprehensive" class="radio-input" checked>
+                            <span class="radio-text"><strong>Maximum / Comprehensive</strong></span>
+                        </label>
+                    </div>
+                    <p class="helper-text">The deeper modes instruct the AI to compare existing articles, titles, topics, search intent, keyword usage, semantic coverage, internal linking opportunities, content gaps, and topical overlap before creating the new article.</p>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()">← Previous</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 4: SEO Strategy -->
+            <div class="step-card" data-step="4">
+                <div class="step-header">
+                    <span class="step-number">Step 4</span>
+                    <h2 class="step-title">SEO Strategy</h2>
+                </div>
+                <p class="step-description">What is your primary SEO strategy or business objective?</p>
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="increase-traffic" class="checkbox-input seo-strategy">
+                            <span class="checkbox-text">Increase organic traffic</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="rank-keyword" class="checkbox-input seo-strategy">
+                            <span class="checkbox-text">Rank for a specific keyword</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="topical-authority" class="checkbox-input seo-strategy">
+                            <span class="checkbox-text">Build topical authority</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="increase-conversions" class="checkbox-input seo-strategy">
+                            <span class="checkbox-text">Increase conversions</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="generate-leads" class="checkbox-input seo-strategy">
+                            <span class="checkbox-text">Generate leads</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="support-products" class="checkbox-input seo-strategy">
+                            <span class="checkbox-text">Support product/service pages</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="ai-search" class="checkbox-input seo-strategy">
+                            <span class="checkbox-text">Improve AI search visibility</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="google-search" class="checkbox-input seo-strategy">
+                            <span class="checkbox-text">Improve Google Search visibility</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="informational" class="checkbox-input seo-strategy">
+                            <span class="checkbox-text">Capture informational queries</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="commercial" class="checkbox-input seo-strategy">
+                            <span class="checkbox-text">Capture commercial queries</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="brand-authority" class="checkbox-input seo-strategy">
+                            <span class="checkbox-text">Build brand authority</span>
+                        </label>
+                    </div>
+                    <div class="custom-input-group">
+                        <label for="otherSeoObjective">Other SEO objective</label>
+                        <input type="text" id="otherSeoObjective" placeholder="Describe your custom objective..." class="input-field">
+                    </div>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()">← Previous</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 5: Primary Keyword -->
+            <div class="step-card" data-step="5">
+                <div class="step-header">
+                    <span class="step-number">Step 5</span>
+                    <h2 class="step-title">Primary Keyword</h2>
+                </div>
+                <p class="step-description">What keyword or search query are you primarily targeting?</p>
+                <div class="form-group">
+                    <label for="primaryKeyword">Primary Keyword <span class="required">*</span></label>
+                    <input type="text" id="primaryKeyword" placeholder="e.g., best industrial air compressor" class="input-field">
+                    <p class="helper-text">Enter the main search query you want the article to target.</p>
+                </div>
+                <div class="form-group">
+                    <label>Keyword Usage Strategy</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="keywordStrategy" value="exact" class="radio-input" checked>
+                            <span class="radio-text">Use exactly what I entered</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="keywordStrategy" value="evaluate" class="radio-input">
+                            <span class="radio-text">Let the AI evaluate and refine it</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="keywordStrategy" value="suggest" class="radio-input">
+                            <span class="radio-text">Use as primary but suggest improvements</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()">← Previous</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 6: Article Language -->
+            <div class="step-card" data-step="6">
+                <div class="step-header">
+                    <span class="step-number">Step 6</span>
+                    <h2 class="step-title">Article Language</h2>
+                </div>
+                <p class="step-description">What language should the final article be written in?</p>
+                <div class="form-group">
+                    <label for="articleLanguage">Language <span class="required">*</span></label>
+                    <select id="articleLanguage" class="select-field">
+                        <option value="">Select a language...</option>
+                        <option value="english">English</option>
+                        <option value="persian">Persian (فارسی)</option>
+                        <option value="arabic">Arabic (العربية)</option>
+                        <option value="french">French (Français)</option>
+                        <option value="german">German (Deutsch)</option>
+                        <option value="spanish">Spanish (Español)</option>
+                        <option value="italian">Italian (Italiano)</option>
+                        <option value="turkish">Turkish (Türkçe)</option>
+                        <option value="portuguese">Portuguese (Português)</option>
+                        <option value="dutch">Dutch (Nederlands)</option>
+                        <option value="russian">Russian (Русский)</option>
+                        <option value="chinese">Chinese (中文)</option>
+                        <option value="japanese">Japanese (日本語)</option>
+                        <option value="korean">Korean (한국어)</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <div id="otherLanguageGroup" style="display: none; margin-top: 1rem;">
+                        <input type="text" id="otherLanguage" placeholder="Specify language..." class="input-field">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label>Writing Conventions</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="conventions" value="native" class="radio-input" checked>
+                            <span class="radio-text">Fully native/localized</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="conventions" value="standard" class="radio-input">
+                            <span class="radio-text">Standard language</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="conventions" value="auto" class="radio-input">
+                            <span class="radio-text">Let the AI determine</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()">← Previous</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 7: Target Audience -->
+            <div class="step-card" data-step="7">
+                <div class="step-header">
+                    <span class="step-number">Step 7</span>
+                    <h2 class="step-title">Audience & Persona</h2>
+                </div>
+                <p class="step-description">Who is the article written for?</p>
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="consumers" class="checkbox-input audience">
+                            <span class="checkbox-text">General consumers</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="business-owners" class="checkbox-input audience">
+                            <span class="checkbox-text">Business owners</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="engineers" class="checkbox-input audience">
+                            <span class="checkbox-text">Engineers</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="specialists" class="checkbox-input audience">
+                            <span class="checkbox-text">Technical specialists</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="procurement" class="checkbox-input audience">
+                            <span class="checkbox-text">Procurement managers</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="executives" class="checkbox-input audience">
+                            <span class="checkbox-text">Executives</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="industrial" class="checkbox-input audience">
+                            <span class="checkbox-text">Industrial buyers</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="students" class="checkbox-input audience">
+                            <span class="checkbox-text">Students</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="parents" class="checkbox-input audience">
+                            <span class="checkbox-text">Parents</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="patients" class="checkbox-input audience">
+                            <span class="checkbox-text">Patients</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="medical" class="checkbox-input audience">
+                            <span class="checkbox-text">Medical professionals</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="researchers" class="checkbox-input audience">
+                            <span class="checkbox-text">Researchers</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="developers" class="checkbox-input audience">
+                            <span class="checkbox-text">Developers</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="marketers" class="checkbox-input audience">
+                            <span class="checkbox-text">Marketers</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="decision-makers" class="checkbox-input audience">
+                            <span class="checkbox-text">Decision makers</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="beginners" class="checkbox-input audience">
+                            <span class="checkbox-text">Beginners</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="advanced" class="checkbox-input audience">
+                            <span class="checkbox-text">Advanced users</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="customAudience">Custom Audience Description</label>
+                    <textarea id="customAudience" placeholder="Describe your specific audience..." class="textarea-field" rows="4"></textarea>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()">← Previous</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 8: Brand Voice -->
+            <div class="step-card" data-step="8">
+                <div class="step-header">
+                    <span class="step-number">Step 8</span>
+                    <h2 class="step-title">Brand Voice</h2>
+                </div>
+                <p class="step-description">How should the article sound?</p>
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="professional" class="checkbox-input voice">
+                            <span class="checkbox-text">Professional</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="technical" class="checkbox-input voice">
+                            <span class="checkbox-text">Technical</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="friendly" class="checkbox-input voice">
+                            <span class="checkbox-text">Friendly</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="educational" class="checkbox-input voice">
+                            <span class="checkbox-text">Educational</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="authoritative" class="checkbox-input voice">
+                            <span class="checkbox-text">Authoritative</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="conversational" class="checkbox-input voice">
+                            <span class="checkbox-text">Conversational</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="premium" class="checkbox-input voice">
+                            <span class="checkbox-text">Premium</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="minimal" class="checkbox-input voice">
+                            <span class="checkbox-text">Minimal</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="persuasive" class="checkbox-input voice">
+                            <span class="checkbox-text">Persuasive</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="expert" class="checkbox-input voice">
+                            <span class="checkbox-text">Expert</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="scientific" class="checkbox-input voice">
+                            <span class="checkbox-text">Scientific</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" value="corporate" class="checkbox-input voice">
+                            <span class="checkbox-text">Corporate</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="customVoice">Custom Brand Voice</label>
+                    <textarea id="customVoice" placeholder="Describe your brand voice..." class="textarea-field" rows="4"></textarea>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()">← Previous</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 9: Search Intent -->
+            <div class="step-card" data-step="9">
+                <div class="step-header">
+                    <span class="step-number">Step 9</span>
+                    <h2 class="step-title">Search Intent</h2>
+                </div>
+                <p class="step-description">What should the article's primary search intent be?</p>
+                <div class="form-group">
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="searchIntent" value="informational" class="radio-input">
+                            <span class="radio-text">Informational</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="searchIntent" value="commercial" class="radio-input">
+                            <span class="radio-text">Commercial Investigation</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="searchIntent" value="transactional" class="radio-input">
+                            <span class="radio-text">Transactional</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="searchIntent" value="navigational" class="radio-input">
+                            <span class="radio-text">Navigational</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="searchIntent" value="local" class="radio-input">
+                            <span class="radio-text">Local</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="searchIntent" value="mixed" class="radio-input">
+                            <span class="radio-text">Mixed</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="searchIntent" value="auto" class="radio-input" checked>
+                            <span class="radio-text">Let AI determine from SERP intent</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()">← Previous</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 10: Article Type -->
+            <div class="step-card" data-step="10">
+                <div class="step-header">
+                    <span class="step-number">Step 10</span>
+                    <h2 class="step-title">Article Format</h2>
+                </div>
+                <p class="step-description">What format should the article take?</p>
+                <div class="form-group">
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="ultimate-guide" class="radio-input">
+                            <span class="radio-text">Ultimate Guide</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="how-to" class="radio-input">
+                            <span class="radio-text">How-To Guide</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="tutorial" class="radio-input">
+                            <span class="radio-text">Step-by-Step Tutorial</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="comparison" class="radio-input">
+                            <span class="radio-text">Comparison</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="listicle" class="radio-input">
+                            <span class="radio-text">Listicle</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="beginner-guide" class="radio-input">
+                            <span class="radio-text">Beginner's Guide</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="expert-guide" class="radio-input">
+                            <span class="radio-text">Expert Guide</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="buying-guide" class="radio-input">
+                            <span class="radio-text">Buying Guide</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="troubleshooting" class="radio-input">
+                            <span class="radio-text">Troubleshooting Guide</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="case-study" class="radio-input">
+                            <span class="radio-text">Case Study</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="faq" class="radio-input">
+                            <span class="radio-text">FAQ Guide</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="educational" class="radio-input">
+                            <span class="radio-text">Educational Article</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="industry-analysis" class="radio-input">
+                            <span class="radio-text">Industry Analysis</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="product-focused" class="radio-input">
+                            <span class="radio-text">Product-Focused Article</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="service-focused" class="radio-input">
+                            <span class="radio-text">Service-Focused Article</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleType" value="auto" class="radio-input" checked>
+                            <span class="radio-text">Let AI choose</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()">← Previous</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Next →</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Steps Container (Steps 11-15) -->
+        <div class="form-container" id="formContainer2" style="display: none;">
+            <!-- Step 11: Article Length -->
+            <div class="step-card active" data-step="11">
+                <div class="step-header">
+                    <span class="step-number">Step 11</span>
+                    <h2 class="step-title">Content Depth</h2>
+                </div>
+                <p class="step-description">How long should the article approximately be?</p>
+                <div class="form-group">
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="articleLength" value="800-1200" class="radio-input">
+                            <span class="radio-text">800–1200 words</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleLength" value="1200-1800" class="radio-input">
+                            <span class="radio-text">1200–1800 words</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleLength" value="1800-2500" class="radio-input">
+                            <span class="radio-text">1800–2500 words</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleLength" value="2500-3500" class="radio-input">
+                            <span class="radio-text">2500–3500 words</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleLength" value="3500+" class="radio-input">
+                            <span class="radio-text">3500+ words</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="articleLength" value="auto" class="radio-input" checked>
+                            <span class="radio-text">Let AI determine based on search intent</span>
+                        </label>
+                    </div>
+                    <p class="helper-text">Word count is a guideline rather than an excuse to add filler. Quality over quantity.</p>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()">← Previous</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 12: Internal Linking -->
+            <div class="step-card" data-step="12">
+                <div class="step-header">
+                    <span class="step-number">Step 12</span>
+                    <h2 class="step-title">Internal Linking Strategy</h2>
+                </div>
+                <p class="step-description">Should the AI recommend internal links?</p>
+                <div class="form-group">
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="internalLinking" value="yes" class="radio-input">
+                            <span class="radio-text">Yes</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="internalLinking" value="no" class="radio-input">
+                            <span class="radio-text">No</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="internalLinking" value="analyze" class="radio-input" checked>
+                            <span class="radio-text">Analyze website and recommend only relevant links</span>
+                        </label>
+                    </div>
+                    <p class="helper-text">The AI will inspect existing content, identify relevant pages, recommend contextual internal links, avoid excessive linking, and use natural anchor text.</p>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()">← Previous</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 13: Competitor Analysis -->
+            <div class="step-card" data-step="13">
+                <div class="step-header">
+                    <span class="step-number">Step 13</span>
+                    <h2 class="step-title">Search & Competitor Research</h2>
+                </div>
+                <p class="step-description">Should the AI perform SERP and competitor research before writing?</p>
+                <div class="form-group">
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="competitorAnalysis" value="mandatory" class="radio-input">
+                            <span class="radio-text">Yes — mandatory</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="competitorAnalysis" value="if-available" class="radio-input" checked>
+                            <span class="radio-text">Yes — if web access is available</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="competitorAnalysis" value="no" class="radio-input">
+                            <span class="radio-text">No</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="competitorAnalysis" value="auto" class="radio-input">
+                            <span class="radio-text">Let AI decide</span>
+                        </label>
+                    </div>
+                    <p class="helper-text">Analysis includes search intent, SERP structure, competing titles, featured snippets, People Also Ask, content gaps, and opportunities for differentiation.</p>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()">← Previous</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 14: Visual Style -->
+            <div class="step-card" data-step="14">
+                <div class="step-header">
+                    <span class="step-number">Step 14</span>
+                    <h2 class="step-title">Article Image Style</h2>
+                </div>
+                <p class="step-description">How should the article images be created?</p>
+                <div class="form-group">
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" name="visualStyle" value="analyze" class="radio-input" checked>
+                            <span class="radio-text">Automatically analyze my existing articles</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="visualStyle" value="photography" class="radio-input">
+                            <span class="radio-text">Realistic photography</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="visualStyle" value="3d" class="radio-input">
+                            <span class="radio-text">3D render</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="visualStyle" value="isometric" class="radio-input">
+                            <span class="radio-text">Isometric illustration</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="visualStyle" value="infographic" class="radio-input">
+                            <span class="radio-text">Modern infographic</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="visualStyle" value="editorial" class="radio-input">
+                            <span class="radio-text">Editorial illustration</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="visualStyle" value="vector" class="radio-input">
+                            <span class="radio-text">Minimal vector</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="visualStyle" value="technical" class="radio-input">
+                            <span class="radio-text">Technical illustration</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="visualStyle" value="cinematic" class="radio-input">
+                            <span class="radio-text">Cinematic</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="visualStyle" value="product" class="radio-input">
+                            <span class="radio-text">Product photography</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="visualStyle" value="corporate" class="radio-input">
+                            <span class="radio-text">Corporate</span>
+                        </label>
+                        <label class="radio-label">
+                            <input type="radio" name="visualStyle" value="auto" class="radio-input">
+                            <span class="radio-text">Let AI determine</span>
+                        </label>
+                    </div>
+                    <p class="helper-text">The AI will analyze your website's visual language and create two unique image prompts for use with image generation systems.</p>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()">← Previous</button>
+                    <button class="btn btn-primary" onclick="nextStep()">Next →</button>
+                </div>
+            </div>
+
+            <!-- Step 15: Review & Generate -->
+            <div class="step-card" data-step="15">
+                <div class="step-header">
+                    <span class="step-number">Step 15</span>
+                    <h2 class="step-title">Review & Generate</h2>
+                </div>
+                <p class="step-description">Review your configuration before generating the Master Prompt.</p>
+                <div class="form-group">
+                    <div class="review-summary" id="reviewSummary">
+                        <!-- Populated by JavaScript -->
+                    </div>
+                </div>
+                <div class="step-navigation">
+                    <button class="btn btn-secondary" onclick="previousStep()">← Previous</button>
+                    <button class="btn btn-primary btn-generate" onclick="generateMasterPrompt()">Generate Master Prompt ✨</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Result Panel -->
+    <div class="result-panel" id="resultPanel" style="display: none;">
+        <div class="result-container">
+            <button class="close-result" onclick="closeResult()">×</button>
+            
+            <div class="result-header">
+                <h2>Master Prompt Generated Successfully</h2>
+                <div class="success-checkmarks">
+                    <div class="check-item">✓ Website context captured</div>
+                    <div class="check-item">✓ SEO strategy defined</div>
+                    <div class="check-item">✓ Target audience defined</div>
+                    <div class="check-item">✓ Article language defined</div>
+                    <div class="check-item">✓ Content audit instructions generated</div>
+                    <div class="check-item">✓ Cannibalization protection enabled</div>
+                    <div class="check-item">✓ CTR strategy enabled</div>
+                    <div class="check-item">✓ Semantic SEO strategy enabled</div>
+                    <div class="check-item">✓ Visual analysis instructions enabled</div>
+                    <div class="check-item">✓ Two image prompts enabled</div>
+                </div>
+            </div>
+
+            <div class="prompt-container">
+                <pre id="generatedPrompt" class="prompt-display"></pre>
+            </div>
+
+            <div class="result-actions">
+                <button class="btn btn-primary" onclick="copyPrompt()">
+                    <span id="copyButtonText">📋 Copy Master Prompt</span>
+                </button>
+                <button class="btn btn-secondary" onclick="downloadPrompt()">⬇️ Download .txt</button>
+                <button class="btn btn-secondary" onclick="editAnswers()">✏️ Edit Answers</button>
+                <button class="btn btn-secondary" onclick="startOver()">↻ Start Over</button>
+            </div>
+
+            <div class="toast" id="toast"></div>
+        </div>
+    </div>
+
+    <!-- Modal for confirmation -->
+    <div class="modal" id="confirmModal" style="display: none;">
+        <div class="modal-content">
+            <h3 id="modalTitle">Confirm Action</h3>
+            <p id="modalMessage">Are you sure?</p>
+            <div class="modal-buttons">
+                <button class="btn btn-secondary" onclick="closeModal()">Cancel</button>
+                <button class="btn btn-primary" onclick="confirmModal()">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
